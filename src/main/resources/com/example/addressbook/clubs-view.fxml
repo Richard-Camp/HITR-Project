@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight= "720" prefWidth= "1280" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <AnchorPane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
+            <Text fill="WHITE" layoutX="26.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CareerLaunch" wrappingWidth="501.0000305175781">
+                <font>
+                    <Font size="60.0" />
+                </font>
+            </Text>
+            <HBox layoutX="26" layoutY="80" prefHeight="38.0" prefWidth="1228" spacing="20.0" style="-fx-background-color: #032557;">
+                <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="150" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="150" style="-fx-background-color: transparent;" text="Jobs" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="150" style="-fx-background-color: transparent;" text="UQ/QUT Clubs" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="150" style="-fx-background-color: transparent;" text="Upcoming Events" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="150" style="-fx-background-color: transparent;" text="Add Resume" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </AnchorPane>
+    </top>
+    <bottom>
+        <AnchorPane>
+
+        </AnchorPane>
+    </bottom>
+</BorderPane>
