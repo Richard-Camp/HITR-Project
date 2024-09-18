@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
 <BorderPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
     <top>
         <AnchorPane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
@@ -116,25 +123,45 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
          <children>
             <Text fill="#663399" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clubs" wrappingWidth="131.7578125">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <ImageView fitHeight="197.0" fitWidth="213.0" layoutX="40.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../Pictures/civil.jpg" />
-               </image>
-            </ImageView>
-            <Text layoutX="55.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Civil Engineering Student Society" textAlignment="CENTER" wrappingWidth="182.84765625">
+            <Text layoutX="55.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" textAlignment="CENTER" wrappingWidth="182.84765625">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <TextArea layoutX="46.0" layoutY="326.0" prefHeight="178.0" prefWidth="200.0" text="CESS represents what it means to be an undergraduate engineer, drinking beers and building a future career. Hosting events that engage not just the student community but also the professional community, CESS manages to provide the all-round aid to your Civil Engineering degrees. " wrapText="true" />
-            <Button layoutX="120.0" layoutY="534.0" mnemonicParsing="false" text="View" />
+            <TextArea layoutX="46.0" layoutY="326.0" prefHeight="178.0" prefWidth="200.0" text="Lorem Ipsum" wrapText="true" />
+            <Button layoutX="125.0" layoutY="534.0" mnemonicParsing="false" text="View" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+            <Text layoutX="308.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" textAlignment="CENTER" wrappingWidth="182.84765625">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <TextArea layoutX="299.0" layoutY="326.0" prefHeight="178.0" prefWidth="200.0" text="Lorem Ipsum" wrapText="true" />
+            <Button layoutX="378.0" layoutY="534.0" mnemonicParsing="false" text="View" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="319.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+            <Text layoutX="568.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" textAlignment="CENTER" wrappingWidth="182.84765625">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <TextArea layoutX="559.0" layoutY="326.0" prefHeight="178.0" prefWidth="200.0" text="Lorem Ipsum" wrapText="true" />
+            <Button layoutX="638.0" layoutY="534.0" mnemonicParsing="false" text="View" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="579.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+            <Text layoutX="823.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" textAlignment="CENTER" wrappingWidth="182.84765625">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <TextArea layoutX="814.0" layoutY="326.0" prefHeight="178.0" prefWidth="200.0" text="Lorem Ipsum" wrapText="true" />
+            <Button layoutX="893.0" layoutY="534.0" mnemonicParsing="false" text="View" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="834.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
          </children>
       </AnchorPane>
    </center>
