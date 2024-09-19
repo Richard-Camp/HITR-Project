@@ -5,7 +5,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.addressbook.controller.HomeController">
     <top>
         <AnchorPane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
             <Text fill="#31dbf2" layoutX="26.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CareerLaunch" wrappingWidth="501.0000305175781">
@@ -57,30 +58,41 @@
     </top>
     <center>
         <AnchorPane prefWidth="1280.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
-            <Text text = "Looking to expand your career opporunities">
+            <Text fill="#663399" layoutX="370" layoutY="50" text="Expand your QUT experience" textAlignment="CENTER">
                 <font>
-
+                    <Font size="40" />
                 </font>
             </Text>
-            <Button layoutX="736" layoutY="384.0" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="Networking Opportunities" textFill="WHITE">
+            <Text layoutX="230" layoutY = "100" text="Career launch is your hub to explore career opportunities, QUT clubs and Networking events.">
+                <font>
+                    <Font size="20" />
+                </font>
+            </Text>
+
+            <Button fx:id="clubButton" onAction="#onClubButtonClick" layoutX="292" layoutY="167" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="QUT Clubs and Activities" textFill="WHITE">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Button>
 
-            <Button layoutX="193" layoutY="167" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="QUT Clubs and Activities" textFill="WHITE">
+            <Button fx:id="resumeButton" onAction="#onResumeButtonClick" layoutX="687" layoutY="167" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="Your Resume" textFill="WHITE">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Button>
 
-            <Button layoutX="736" layoutY="167" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="Your Resume" textFill="WHITE">
+            <Button fx:id="jobsButton" onAction="#onJobsButtonClick" layoutX="490" layoutY="384" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="Jobs and Career Opportunities" textFill="WHITE">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Button>
+            <Button fx:id="tipsButton" onAction="#onCareerTipsButtonClick" layoutX="95" layoutY="384" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="Career Tips" textFill="WHITE">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Button>
 
-            <Button layoutX="193" layoutY="384" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="Jobs and Career Opportunities" textFill="WHITE">
+            <Button fx:id="networkingButton" onAction="#onNetworkingButtonClick" layoutX="885" layoutY="384.0" prefHeight="150" prefWidth="300" style="-fx-background-color: #7f5699;" text="Networking Opportunities" textFill="WHITE">
                 <font>
                     <Font size="16.0" />
                 </font>
