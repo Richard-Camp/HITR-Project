@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style2.css">
+    <!-- Top Navigation Bar -->
+    <top>
+        <VBox>
+            <!-- Header with Logo and Search -->
+            <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #5c2768;">
+                <Label text="CareerLaunch" style="-fx-text-fill: #9beaff; -fx-font-size: 30px; -fx-font-weight: bold; -fx-padding: 10;" />
+                <Region HBox.hgrow="ALWAYS" />
+            </HBox>
+            <!-- Navigation Bar with ToggleButtons -->
+            <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #5c2768; -fx-padding: 10;">
+                <ToggleButton text="Add Resume" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Career Tips" styleClass="nav-toggle-button-active" toggleGroup="$navigationGroup" selected="true"/>
+                <ToggleButton text="View Upcoming Events" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Alumni Network Access" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Track Status" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+            <!-- Career Tips Title -->
+            <Label text="Career Tips" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #5c2768;" />
+
+            <!-- Career Tips Grid -->
+            <GridPane hgap="20" vgap="20" alignment="CENTER">
+                <children>
+                    <Button text="Tip 1" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="tip-button"/>
+                    <Button text="Tip 2" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="tip-button"/>
+                    <Button text="Tip 3" GridPane.columnIndex="2" GridPane.rowIndex="0" styleClass="tip-button"/>
+                    <Button text="Tip 4" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="tip-button"/>
+                    <Button text="Tip 5" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="tip-button"/>
+                    <Button text="Tip 6" GridPane.columnIndex="2" GridPane.rowIndex="1" styleClass="tip-button"/>
+                </children>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <!-- Footer -->
+    <bottom>
+        <HBox spacing="50" alignment="CENTER" style="-fx-background-color: #5c2768; -fx-padding: 10;">
+            <Label text="Home" style="-fx-text-fill: #ffffff; -fx-font-size: 16px;" />
+            <Label text="About" style="-fx-text-fill: #ffffff; -fx-font-size: 16px;" />
+            <Label text="Resources" style="-fx-text-fill: #ffffff; -fx-font-size: 16px;" />
+        </HBox>
+    </bottom>
+</BorderPane>

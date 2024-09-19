@@ -3,9 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css">
     <!-- Top Navigation Bar -->
     <top>
         <VBox>
@@ -15,13 +14,13 @@
                 <Region HBox.hgrow="ALWAYS" />
                 <TextField promptText="Search" style="-fx-background-color: #9e5098; -fx-text-fill: white; -fx-padding: 5; -fx-prompt-text-fill: #ddd; -fx-background-radius: 20;" />
             </HBox>
-            <!-- Navigation Bar -->
+            <!-- Navigation Bar with ToggleButtons -->
             <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #5c2768; -fx-padding: 10;">
-                <ToggleButton text="Add Resume" styleClass="nav-button-selected" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Career Tips" styleClass="nav-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="View Upcoming Events" styleClass="nav-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Alumni Network Access" styleClass="nav-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Track Status" styleClass="nav-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Add Resume" styleClass="nav-toggle-button-active" toggleGroup="$navigationGroup" selected="true"/>
+                <ToggleButton text="Career Tips" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="View Upcoming Events" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Alumni Network Access" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Track Status" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
             </HBox>
         </VBox>
     </top>
@@ -33,7 +32,7 @@
             <VBox spacing="20" alignment="CENTER" style="-fx-border-color: #5c2768; -fx-border-width: 0 2 0 0; -fx-padding: 0 20 0 20;">
                 <ImageView fitHeight="150" fitWidth="150" style="-fx-effect: dropshadow(gaussian, #5c2768, 10, 0, 0, 0);" />
                 <Label text="Add Resume" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #5c2768;" />
-                <TextField promptText="Please select a file and upload here" style="-fx-pref-width: 250px;" />
+                <TextArea promptText="Please select a file and upload here" style="-fx-pref-width: 250px; -fx-pref-height: 80px; -fx-background-color: #cce6e6; -fx-text-fill: #5c2768;" />
                 <Button text="Add" style="-fx-background-color: #5c2768; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 5 20;" />
             </VBox>
 
@@ -41,7 +40,7 @@
             <VBox spacing="20" alignment="CENTER">
                 <ImageView fitHeight="150" fitWidth="150" style="-fx-effect: dropshadow(gaussian, #5c2768, 10, 0, 0, 0);" />
                 <Label text="Edit Resume" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #5c2768;" />
-                <TextField promptText="Edit Resume Details" style="-fx-pref-width: 250px;" />
+                <TextArea promptText="Edit your resume details here" style="-fx-pref-width: 250px; -fx-pref-height: 80px; -fx-background-color: #cce6e6; -fx-text-fill: #5c2768;" />
                 <Button text="Update" style="-fx-background-color: #5c2768; -fx-text-fill: white; -fx-background-radius: 20; -fx-padding: 5 20;" />
             </VBox>
         </HBox>

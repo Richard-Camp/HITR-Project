@@ -1,0 +1,35 @@
+/* Default navigation button style */
+.nav-toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+/* Active navigation button style */
+.nav-toggle-button-active {
+    -fx-background-color: #8a3f92;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0 0 2 0; /* Bottom border */
+}
+
+/* Navigation button hover effect */
+.nav-toggle-button:hover {
+    -fx-background-color: #703b7e;
+}
+
+/* Styling for the upload button */
+.upload-button {
+    -fx-background-color: #5c2768;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+}
+
+.upload-button:hover {
+    -fx-background-color: #703b7e;
+}

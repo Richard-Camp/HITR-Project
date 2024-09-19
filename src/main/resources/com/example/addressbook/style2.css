@@ -1,0 +1,33 @@
+/* Default navigation button style */
+.nav-toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+/* Active navigation button style */
+.nav-toggle-button-active {
+    -fx-background-color: #8a3f92;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0 0 2 0; /* Bottom border */
+}
+
+/* Tip buttons */
+.tip-button {
+    -fx-background-color: #cce6e6;
+    -fx-text-fill: #5c2768;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 150;
+    -fx-pref-height: 100;
+    -fx-background-radius: 10;
+}
+
+/* Tip buttons hover effect */
+.tip-button:hover {
+    -fx-background-color: #b3e0dc;
+}
