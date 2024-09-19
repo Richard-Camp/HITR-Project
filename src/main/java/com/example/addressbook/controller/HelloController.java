@@ -46,4 +46,14 @@ public class HelloController {
         stage.setScene(scene);
     }
 
+    @FXML
+    private Button homeButton;
+    @FXML
+    protected void onHomeButtonClick() throws IOException {
+        Stage stage = (Stage) homeButton.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Home.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        stage.setScene(scene);
+    }
+
 }
