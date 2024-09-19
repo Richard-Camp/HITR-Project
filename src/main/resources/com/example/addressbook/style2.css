@@ -16,20 +16,18 @@
     -fx-border-width: 0 0 2 0; /* Bottom border */
 }
 
-/* Navigation button hover effect */
-.nav-toggle-button:hover {
-    -fx-background-color: #703b7e;
+/* Tip buttons */
+.tip-button {
+    -fx-background-color: #cce6e6;
+    -fx-text-fill: #5c2768;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 150;
+    -fx-pref-height: 100;
+    -fx-background-radius: 10;
 }
 
-/* Styling for the upload button */
-.upload-button {
-    -fx-background-color: #5c2768;
-    -fx-text-fill: white;
-    -fx-background-radius: 20;
-    -fx-padding: 10 20;
-    -fx-font-size: 14px;
-}
-
-.upload-button:hover {
-    -fx-background-color: #703b7e;
+/* Tip buttons hover effect */
+.tip-button:hover {
+    -fx-background-color: #b3e0dc;
 }
