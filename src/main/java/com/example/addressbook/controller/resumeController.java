@@ -7,6 +7,21 @@ import javafx.scene.Scene;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
+import java.io.File;
+
+import javafx.scene.image.WritableImage;
+import javafx.scene.image.PixelWriter;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.rendering.PDFRenderer;
+import org.apache.pdfbox.rendering.ImageType;
+
+import java.awt.image.BufferedImage;
+
 import java.io.IOException;
 
 public class resumeController {
@@ -90,5 +105,62 @@ public class resumeController {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("feedback-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
+    }
+
+
+    @FXML
+    private Label fileLabel;
+
+    @FXML
+    private ImageView imageView;
+
+    @FXML
+    private Button uploadButton;
+    @FXML
+    public void onUploadButtonClick() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files (*.png, *.jpg, *.gif)", "*.png", "*.jpg", "*.gif"),
+                new FileChooser.ExtensionFilter("Document Files (*.doc, *.docx, *.pdf)", "*.doc", "*.docx", "*.pdf")
+        );
+
+        File file = fileChooser.showOpenDialog(uploadButton.getScene().getWindow());
+        if (file != null) {
+            fileLabel.setText(file.getName());
+
+            if (file.getName().toLowerCase().endsWith(".png") ||
+                    file.getName().toLowerCase().endsWith(".jpg") ||
+                    file.getName().toLowerCase().endsWith(".gif")) {
+
+                Image image = new Image(file.toURI().toString());
+                imageView.setImage(image);
+            } else if (file.getName().toLowerCase().endsWith(".pdf")) {
+                previewPdf(file);
+            }
+        }
+    }
+
+    private void previewPdf(File file) {
+        try (PDDocument document = PDDocument.load(file)) {
+            PDFRenderer pdfRenderer = new PDFRenderer(document);
+            BufferedImage bim = pdfRenderer.renderImageWithDPI(0, 300, ImageType.RGB); // Render first page at 300 DPI
+
+            // Create a WritableImage to hold the BufferedImage data
+            WritableImage writableImage = new WritableImage(bim.getWidth(), bim.getHeight());
+
+            // Render the BufferedImage to the WritableImage
+            PixelWriter pixelWriter = writableImage.getPixelWriter();
+            for (int y = 0; y < bim.getHeight(); y++) {
+                for (int x = 0; x < bim.getWidth(); x++) {
+                    int rgb = bim.getRGB(x, y);
+                    pixelWriter.setArgb(x, y, rgb);
+                }
+            }
+
+            imageView.setImage(writableImage);
+        } catch (IOException e) {
+            e.printStackTrace();
+            fileLabel.setText("Error loading PDF");
+        }
     }
 }
