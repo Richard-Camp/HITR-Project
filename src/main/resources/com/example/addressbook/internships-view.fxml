@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="com.example.addressbook.controller.resumeController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css">
+    <!-- Top Navigation Bar -->
+    <top>
+        <VBox>
+            <!-- Header with Logo and Search -->
+            <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #5c2768;">
+                <Label text="CareerLaunch" style="-fx-text-fill: #9beaff; -fx-font-size: 30px; -fx-font-weight: bold; -fx-padding: 10;" />
+                <Region HBox.hgrow="ALWAYS" />
+                <TextField promptText="Search" style="-fx-background-color: #9e5098; -fx-text-fill: white; -fx-padding: 5; -fx-prompt-text-fill: #ddd; -fx-background-radius: 20;" />
+            </HBox>
+            <!-- Navigation Bar with ToggleButtons -->
+            <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #5c2768; -fx-padding: 10;">
+                <ToggleButton text="Add Resume" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Career Tips" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="View Upcoming Events" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Alumni Network Access" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Track Status" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+            <!-- Title for Internships -->
+            <Label text="Exclusive University Internships" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #5c2768;" />
+
+            <!-- Grid for Company Names, Text Areas, and Apply Buttons -->
+            <GridPane hgap="20" vgap="20" alignment="CENTER">
+                <children>
+                    <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
+                        <TextArea fx:id="companyInfo1" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
+                        <Button text="Apply" styleClass="apply-button"/>
+                    </VBox>
+                    <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
+                        <TextArea fx:id="companyInfo2" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
+                        <Button text="Apply" styleClass="apply-button"/>
+                    </VBox>
+                    <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
+                        <TextArea fx:id="companyInfo3" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
+                        <Button text="Apply" styleClass="apply-button"/>
+                    </VBox>
+
+                    <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
+                        <TextArea fx:id="companyInfo4" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
+                        <Button text="Apply" styleClass="apply-button"/>
+                    </VBox>
+                    <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
+                        <TextArea fx:id="companyInfo5" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
+                        <Button text="Apply" styleClass="apply-button"/>
+                    </VBox>
+                    <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
+                        <TextArea fx:id="companyInfo6" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
+                        <Button text="Apply" styleClass="apply-button"/>
+                    </VBox>
+                </children>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <!-- Footer -->
+    <bottom>
+        <HBox spacing="50" alignment="CENTER" style="-fx-background-color: #5c2768; -fx-padding: 10;">
+            <Label text="Home" style="-fx-text-fill: #ffffff; -fx-font-size: 16px;" />
+            <Label text="About" style="-fx-text-fill: #ffffff; -fx-font-size: 16px;" />
+            <Label text="Resources" style="-fx-text-fill: #ffffff; -fx-font-size: 16px;" />
+        </HBox>
+    </bottom>
+</BorderPane>
