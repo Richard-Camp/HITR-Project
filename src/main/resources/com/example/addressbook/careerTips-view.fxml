@@ -3,25 +3,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style2.css">
+<BorderPane fx:controller="com.example.addressbook.controller.CareerController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style2.css">
     <!-- Top Navigation Bar -->
     <top>
         <VBox>
             <!-- Header with Logo and Search -->
-            <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #5c2768;">
-                <Label text="CareerLaunch" style="-fx-text-fill: #9beaff; -fx-font-size: 30px; -fx-font-weight: bold; -fx-padding: 10;" />
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #5c2768;">
+                <Label style="-fx-text-fill: #9beaff; -fx-font-size: 30px; -fx-font-weight: bold; -fx-padding: 10;" text="CareerLaunch" />
                 <Region HBox.hgrow="ALWAYS" />
             </HBox>
             <!-- Navigation Bar with ToggleButtons -->
-            <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #5c2768; -fx-padding: 10;">
-                <ToggleButton text="Add Resume" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Career Tips" styleClass="nav-toggle-button-active" toggleGroup="$navigationGroup" selected="true"/>
-                <ToggleButton text="View Upcoming Events" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Alumni Network Access" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Jobs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Internships" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton text="Feedback" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+            <HBox alignment="CENTER" spacing="20" style="-fx-background-color: #5c2768; -fx-padding: 10;">
+                <ToggleButton fx:id="resumeButton" onAction="#onResumeButtonClick" styleClass="nav-toggle-button" text="Add Resume">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="navigationGroup" />
+                    </toggleGroup></ToggleButton>
+                <ToggleButton fx:id="tipsButton" onAction="#onCareerTipsButtonClick" selected="true" styleClass="nav-toggle-button-active" text="Career Tips" toggleGroup="$navigationGroup" />
+                <ToggleButton fx:id="networkingButton" onAction="#onNetworkingButtonClick" styleClass="nav-toggle-button" text="View Upcoming Events" toggleGroup="$navigationGroup" />
+                <ToggleButton fx:id="alumniNetworkButton" onAction="#onAlumniButtonClick" styleClass="nav-toggle-button" text="Alumni Network Access" toggleGroup="$navigationGroup" />
+                <ToggleButton fx:id="clubButton" onAction="#onClubButtonClick" text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton fx:id="jobsButton" onAction="#onJobsButtonClick" text="Jobs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton fx:id="internshipButton" onAction="#onInternshipButtonClick" text="Internships" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton fx:id="feedbackButton" onAction="#onFeedbackButtonClick" text="Feedback" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton fx:id="logoutButton" onAction="#onLogOutButtonClick" text="Log-Out" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
             </HBox>
         </VBox>
     </top>

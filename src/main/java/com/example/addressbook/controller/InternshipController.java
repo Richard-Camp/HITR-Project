@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class resumeController {
+public class InternshipController {
     @FXML
     private ToggleButton clubButton;
     @FXML
