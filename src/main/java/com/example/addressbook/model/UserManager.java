@@ -1,10 +1,9 @@
 package com.example.addressbook.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class ContactManager {
-    private IContactDAO contactDAO;
+public class UserManager {
+    private IUserDAO contactDAO;
     public ContactManager(IContactDAO contactDAO) {
         this.contactDAO = contactDAO;
     }
