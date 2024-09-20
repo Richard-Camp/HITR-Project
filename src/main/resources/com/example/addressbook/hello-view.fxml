@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="com.example.addressbook.controller.HelloController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
   <left>
     <AnchorPane prefHeight="720.0" prefWidth="830.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
       <children>
@@ -39,7 +39,7 @@
           </font>
         </Button>
         <Line endX="266.0" layoutX="236.0" layoutY="406.0" startX="-100.0" stroke="WHITE" />
-        <Hyperlink layoutX="350.0" layoutY="423.0" text="Join Now" textFill="WHITE">
+        <Hyperlink layoutX="350.0" layoutY="423.0" text="Join Now" textFill="WHITE" onAction="#handleJoinNow">
           <font>
             <Font size="20.0" />
           </font></Hyperlink>
@@ -60,7 +60,7 @@
           <font>
             <Font size="20.0" />
           </font></PasswordField>
-        <Button layoutX="171.0" layoutY="495.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="108.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE">
+        <Button  fx:id="loginButton" onAction="#onLoginButtonClick" layoutX="171.0" layoutY="495.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="108.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE">
           <font>
             <Font size="16.0" />
           </font></Button>
