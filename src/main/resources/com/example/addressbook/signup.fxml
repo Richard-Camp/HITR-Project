@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="256.0" fitWidth="321.0" layoutX="90.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/nord.png" />
+
                </image>
             </ImageView>
          </children>
