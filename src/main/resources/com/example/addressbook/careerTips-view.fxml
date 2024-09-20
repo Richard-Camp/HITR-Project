@@ -20,6 +20,8 @@
                 <ToggleButton text="Alumni Network Access" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton text="Jobs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Internships" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Feedback" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
             </HBox>
         </VBox>
     </top>
