@@ -1,4 +1,4 @@
-package com.example.addressbook.model;
+package com.example.addressbook.model.User;
 
 import java.util.List;
 
@@ -26,5 +26,7 @@ public interface IUserDAO {
      * Retrieves all users from the database.
      * @return A list of all users in the database.
      */
+    public User getUser(int id);
+
     public List<User> getAllUsers();
 }
