@@ -28,13 +28,34 @@ public class HelloController {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/addressbook/signup.fxml"));
             Parent root = loader.load();
-            Scene scene = new Scene(root, 1000, 600);
+            Scene scene = new Scene(root, 500, 600);
             signupStage.setScene(scene);
             signupStage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private Hyperlink joinNowLinkk;
+
+    @FXML
+    public void handleJoinNoww() {
+        try {
+            Stage signupStage = new Stage();
+            signupStage.initModality(Modality.APPLICATION_MODAL);
+            signupStage.setTitle("Sign Up");
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/addressbook/test.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root, 500, 600);
+            signupStage.setScene(scene);
+            signupStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     private Button loginButton;

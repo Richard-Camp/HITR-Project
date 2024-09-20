@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class resumeController {
+public class InternshipController {
     @FXML
     private ToggleButton clubButton;
     @FXML
@@ -69,7 +69,7 @@ public class resumeController {
     @FXML
     protected void onInternshipButtonClick() throws IOException {
         Stage stage = (Stage) internshipButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("internships-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("internship-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
