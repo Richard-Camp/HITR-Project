@@ -113,24 +113,22 @@
         </AnchorPane>
     </left>
     <center>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;"
-                    BorderPane.alignment="CENTER">
-            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                  text="Alumni Network Access">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
+            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alumni Network Access">
                 <font>
-                    <Font name="System Bold" size="48.0"/>
+                    <Font name="System Bold" size="48.0" />
                 </font>
             </Text>
             <Accordion layoutX="36.0" layoutY="114.0" prefHeight="78.0" prefWidth="794.0">
                 <panes>
                     <TitledPane animated="false" text="Alumni">
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                     </TitledPane>
                     <TitledPane animated="false" text="Alumni">
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                     </TitledPane>
                     <TitledPane animated="false" text="Alumni">
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                     </TitledPane>
                 </panes>
             </Accordion>
