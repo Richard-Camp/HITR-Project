@@ -64,7 +64,7 @@
           <font>
             <Font size="16.0" />
           </font></Button>
-        <Hyperlink layoutX="140.0" layoutY="583.0" text="Forgot Your Password ?">
+        <Hyperlink layoutX="140.0" layoutY="583.0" text="Forgot Your Password ?" onAction="#handleJoinNoww">
           <font>
             <Font size="16.0" />
           </font></Hyperlink>
