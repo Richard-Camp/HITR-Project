@@ -3,19 +3,12 @@ package com.example.addressbook.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MOCKContactDAO implements IContactDAO {
+public class MockContactDAO implements IContactDAO {
     /**
      * A static list of contacts to be used as a mock database.
      */
-    public static final ArrayList<Contact> contacts = new ArrayList<>();
-    private static int autoIncrementedId = 0;
-
-    public MOCKContactDAO() {
-        // Add some initial contacts to the mock database
-        addContact(new Contact("John", "Doe", "johndoe@example.com", "0423423423"));
-        addContact(new Contact("Jane", "Doe", "janedoe@example.com", "0423423424"));
-        addContact(new Contact("Jay", "Doe", "jaydoe@example.com", "0423423425"));
-    }
+    public final ArrayList<Contact> contacts = new ArrayList<>();
+    private int autoIncrementedId = 0;
 
     @Override
     public void addContact(Contact contact) {
