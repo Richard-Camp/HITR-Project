@@ -24,7 +24,6 @@
                 <ToggleButton fx:id="clubButton" onAction="#onClubButtonClick" text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="jobsButton" onAction="#onJobsButtonClick" text="Jobs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="internshipButton" onAction="#onInternshipButtonClick" text="Internships" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton fx:id="feedbackButton" onAction="#onFeedbackButtonClick" text="Feedback" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="logoutButton" onAction="#onLogOutButtonClick" text="Log-Out" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
             </HBox>
         </VBox>

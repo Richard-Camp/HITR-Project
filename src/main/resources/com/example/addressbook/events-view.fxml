@@ -12,42 +12,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addressbook.controller.HelloController">
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Region?>
+<BorderPane fx:controller="com.example.addressbook.controller.EventsController" stylesheets="@style2.css" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
     <top>
-        <AnchorPane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
-            <Text fill="WHITE" layoutX="26.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CareerLaunch" wrappingWidth="501.0000305175781">
-                <font>
-                    <Font size="60.0" />
-                </font>
-            </Text>
-            <HBox layoutY="75.0" prefHeight="38.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #032557;">
-                <Button fx:id="homeButton" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
-                <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="150" style="-fx-background-color: transparent;" text="Jobs" textFill="WHITE">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
-                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="150" style="-fx-background-color: transparent;" text="Clubs" textFill="WHITE">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
-                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="150" style="-fx-background-color: transparent;" text="Upcoming Events" textFill="WHITE">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
-                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="150" style="-fx-background-color: transparent;" text="Add Resume" textFill="WHITE">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
+        <VBox>
+            <!-- Header with Logo and Search -->
+            <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #5c2768;">
+                <Label style="-fx-text-fill: #9beaff; -fx-font-size: 30px; -fx-font-weight: bold; -fx-padding: 10;" text="CareerLaunch" />
+                <Region HBox.hgrow="ALWAYS" />
             </HBox>
-        </AnchorPane>
+            <!-- Navigation Bar with ToggleButtons -->
+            <HBox alignment="CENTER" spacing="20" style="-fx-background-color: #5c2768; -fx-padding: 10;">
+                <ToggleButton fx:id="resumeButton" onAction="#onResumeButtonClick" styleClass="nav-toggle-button" text="Add Resume">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="navigationGroup" />
+                    </toggleGroup></ToggleButton>
+                <ToggleButton fx:id="tipsButton" onAction="#onCareerTipsButtonClick" selected="true" styleClass="nav-toggle-button-active" text="Career Tips" toggleGroup="$navigationGroup" />
+                <ToggleButton fx:id="networkingButton" onAction="#onNetworkingButtonClick" styleClass="nav-toggle-button" text="View Upcoming Events" toggleGroup="$navigationGroup" />
+                <ToggleButton fx:id="alumniNetworkButton" onAction="#onAlumniButtonClick" styleClass="nav-toggle-button" text="Alumni Network Access" toggleGroup="$navigationGroup" />
+                <ToggleButton fx:id="clubButton" onAction="#onClubButtonClick" text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton fx:id="jobsButton" onAction="#onJobsButtonClick" text="Jobs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton fx:id="internshipButton" onAction="#onInternshipButtonClick" text="Internships" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton fx:id="logoutButton" onAction="#onLogOutButtonClick" text="Log-Out" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+            </HBox>
+        </VBox>
     </top>
     <bottom>
         <AnchorPane>
@@ -115,7 +107,7 @@
     </left>
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
-            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alumni Network Events">
+            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUT Networking Events">
                 <font>
                     <Font name="System Bold" size="48.0" />
                 </font>

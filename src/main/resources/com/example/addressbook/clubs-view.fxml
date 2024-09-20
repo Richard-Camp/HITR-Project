@@ -17,7 +17,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Region?>
-<BorderPane fx:controller="com.example.addressbook.controller.ClubController" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="com.example.addressbook.controller.ClubController" stylesheets="@style2.css" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
     <top>
         <VBox>
             <!-- Header with Logo and Search -->
@@ -37,7 +37,6 @@
                 <ToggleButton fx:id="clubButton" onAction="#onClubButtonClick" text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="jobsButton" onAction="#onJobsButtonClick" text="Jobs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="internshipButton" onAction="#onInternshipButtonClick" text="Internships" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton fx:id="feedbackButton" onAction="#onFeedbackButtonClick" text="Feedback" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="logoutButton" onAction="#onLogOutButtonClick" text="Log-Out" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
             </HBox>
         </VBox>

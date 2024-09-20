@@ -25,7 +25,6 @@
                 <ToggleButton fx:id="clubButton" onAction="#onClubButtonClick" text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="jobsButton" onAction="#onJobsButtonClick" text="Jobs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="internshipButton" onAction="#onInternshipButtonClick" text="Internships" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
-                <ToggleButton fx:id="feedbackButton" onAction="#onFeedbackButtonClick" text="Feedback" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton fx:id="logoutButton" onAction="#onLogOutButtonClick" text="Log-Out" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
             </HBox>
         </VBox>
@@ -43,13 +42,13 @@
                 </font>
             </Text>
 
-            <Button layoutX="292" layoutY="167" onAction="#onClubButtonClick" prefHeight="150" prefWidth="300" style="-fx-background-color: #663399;" text="QUT Clubs and Activities" textFill="WHITE">
+            <Button layoutX="95" layoutY="167" onAction="#onClubButtonClick" prefHeight="150" prefWidth="300" style="-fx-background-color: #663399;" text="QUT Clubs and Activities" textFill="WHITE">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Button>
 
-            <Button layoutX="687" layoutY="167" onAction="#onResumeButtonClick" prefHeight="150" prefWidth="300" style="-fx-background-color: #663399;" text="Your Resume" textFill="WHITE">
+            <Button layoutX="490" layoutY="167" onAction="#onResumeButtonClick" prefHeight="150" prefWidth="300" style="-fx-background-color: #663399;" text="Your Resume" textFill="WHITE">
                 <font>
                     <Font size="16.0" />
                 </font>
@@ -73,7 +72,7 @@
                 </font>
             </Button>
 
-            <Button layoutX="885" layoutY="384.0" onAction="#onAlumniButtonClick" prefHeight="150" prefWidth="300" style="-fx-background-color: #663399;" text="Networking Opportunities" textFill="WHITE">
+            <Button layoutX="885" layoutY="167" onAction="#onAlumniButtonClick" prefHeight="150" prefWidth="300" style="-fx-background-color: #663399;" text="Alumni Network" textFill="WHITE">
                 <font>
                     <Font size="16.0" />
                 </font>
