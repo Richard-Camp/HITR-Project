@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -55,7 +56,7 @@
     </bottom>
     <left>
         <AnchorPane prefHeight="602.0" prefWidth="241.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
-            <Text fill="WHITE" layoutX="23.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter Alumni">
+            <Text fill="WHITE" layoutX="23.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter Events">
                 <font>
                     <Font name="System Bold" size="24.0" />
                 </font>
@@ -105,7 +106,7 @@
                     <Font size="15.0" />
                 </font>
             </TextField>
-            <TextField layoutX="24.0" layoutY="33.0" prefHeight="31.0" prefWidth="193.0" promptText="Search Alumni">
+            <TextField layoutX="24.0" layoutY="33.0" prefHeight="31.0" prefWidth="193.0" promptText="Search Events">
                 <font>
                     <Font size="15.0" />
                 </font>
@@ -114,24 +115,37 @@
     </left>
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
-            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alumni Network Access">
+            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alumni Network Events">
                 <font>
                     <Font name="System Bold" size="48.0" />
                 </font>
             </Text>
-            <Accordion layoutX="36.0" layoutY="114.0" prefHeight="78.0" prefWidth="794.0">
-                <panes>
-                    <TitledPane animated="false" text="Alumni">
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </TitledPane>
-                    <TitledPane animated="false" text="Alumni">
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </TitledPane>
-                    <TitledPane animated="false" text="Alumni">
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </TitledPane>
-                </panes>
-            </Accordion>
+         <Pane layoutX="31.0" layoutY="108.0" prefHeight="117.0" prefWidth="542.0" style="-fx-background-color: #d4d4d4;">
+            <children>
+               <Accordion prefHeight="77.0" prefWidth="542.0">
+                 <panes>
+                   <TitledPane animated="false" text="Event">
+                     <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                 <Text layoutX="8.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              </children>
+                           </AnchorPane>
+                     </content>
+                   </TitledPane>
+                     <TitledPane animated="false" layoutX="10.0" layoutY="88.0" text="Event">
+                        <content>
+                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                 <Text layoutX="7.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              </children>
+                           </AnchorPane>
+                        </content>
+                     </TitledPane>
+                 </panes>
+               </Accordion>
+            </children>
+         </Pane>
         </AnchorPane>
     </center>
 </BorderPane>
