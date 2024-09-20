@@ -74,20 +74,20 @@ public class BannerController {
         stage.setScene(scene);
     }
     @FXML
+    private ToggleButton logoutButton;
+    @FXML
+    protected void onLogOutButtonClick() throws IOException {
+        Stage stage = (Stage) logoutButton.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        stage.setScene(scene);
+    }
+    @FXML
     private ToggleButton feedbackButton;
     @FXML
     protected void onFeedbackButtonClick() throws IOException {
         Stage stage = (Stage) feedbackButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("feedback-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
-        stage.setScene(scene);
-    }
-    @FXML
-    private ToggleButton logoutButton;
-    @FXML
-    protected void onLogOutButtonClick() throws IOException {
-        Stage stage = (Stage) feedbackButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
