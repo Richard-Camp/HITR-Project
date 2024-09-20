@@ -19,6 +19,7 @@
                 <ToggleButton text="View Upcoming Events" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton text="Alumni Network Access" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
                 <ToggleButton text="Track Status" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
+                <ToggleButton text="Clubs" styleClass="nav-toggle-button" toggleGroup="$navigationGroup"/>
             </HBox>
         </VBox>
     </top>
