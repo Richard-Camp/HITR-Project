@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:controller="com.example.addressbook.controller.HelloController" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addressbook.controller.HelloController">
     <top>
         <AnchorPane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
             <Text fill="WHITE" layoutX="26.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CareerLaunch" wrappingWidth="501.0000305175781">
@@ -21,7 +20,7 @@
                 </font>
             </Text>
             <HBox layoutY="75.0" prefHeight="38.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #032557;">
-                <Button fx:id="homeButton" onAction="#onHomeButtonClick" mnemonicParsing="false" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                <Button fx:id="homeButton" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
                     <font>
                         <Font size="16.0" />
                     </font>
@@ -55,128 +54,92 @@
         </AnchorPane>
     </bottom>
     <left>
-        <AnchorPane prefHeight="602.0" prefWidth="241.0" style="-fx-background-color: #663399;"
-                    BorderPane.alignment="CENTER">
-            <Text fill="WHITE" layoutX="23.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter Jobs">
+        <AnchorPane prefHeight="602.0" prefWidth="241.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
+            <Text fill="WHITE" layoutX="23.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter Alumni">
                 <font>
-                    <Font name="System Bold" size="24.0"/>
+                    <Font name="System Bold" size="24.0" />
                 </font>
             </Text>
-            <Text fill="WHITE" layoutX="23.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Type">
+            <Text fill="WHITE" layoutX="23.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
                 <font>
-                    <Font size="16.0"/>
-                </font>
-            </Text>
-            <Text fill="WHITE" layoutX="23.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Range">
-                <font>
-                    <Font size="16.0"/>
+                    <Font size="16.0" />
                 </font>
             </Text>
             <Text fill="WHITE" layoutX="24.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
                 <font>
-                    <Font size="16.0"/>
+                    <Font size="16.0" />
                 </font>
             </Text>
-            <Slider layoutX="23.0" layoutY="515.0" max="100000.0" snapToTicks="true"/>
-            <CheckBox layoutX="25.0" layoutY="186.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0"
-                      text="Health Care" textFill="WHITE">
+            <CheckBox layoutX="25.0" layoutY="186.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Health Care" textFill="WHITE">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="219.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0"
-                      text="Education" textFill="WHITE">
+            <CheckBox layoutX="25.0" layoutY="219.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Education" textFill="WHITE">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="285.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="161.0"
-                      text="Sales &amp;  Marketing" textFill="WHITE">
+            <CheckBox layoutX="25.0" layoutY="285.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="161.0" text="Sales &amp;  Marketing" textFill="WHITE">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="252.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="167.0"
-                      text="Finance &amp; Business" textFill="WHITE">
+            <CheckBox layoutX="25.0" layoutY="252.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="167.0" text="Finance &amp; Business" textFill="WHITE">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="318.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0"
-                      text="Engineering" textFill="WHITE">
+            <CheckBox layoutX="25.0" layoutY="318.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Engineering" textFill="WHITE">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="352.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="168.0"
-                      text="Legal Professionals" textFill="WHITE">
+            <CheckBox layoutX="25.0" layoutY="352.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="168.0" text="Legal Professionals" textFill="WHITE">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </CheckBox>
             <TextField layoutX="23.0" layoutY="428.0" prefHeight="31.0" prefWidth="197.0" promptText="Enter Postcode">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </TextField>
-            <TextField layoutX="24.0" layoutY="33.0" prefHeight="31.0" prefWidth="193.0" promptText="Search Jobs">
+            <TextField layoutX="24.0" layoutY="33.0" prefHeight="31.0" prefWidth="193.0" promptText="Search Alumni">
                 <font>
-                    <Font size="15.0"/>
+                    <Font size="15.0" />
                 </font>
             </TextField>
         </AnchorPane>
     </left>
     <center>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;"
-                    BorderPane.alignment="CENTER">
-            <Pane layoutX="52.0" layoutY="61.0" prefHeight="270.0" prefWidth="350.0"
-                  style="-fx-background-color: #FFFFFF;">
-                <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name">
-                    <font>
-                        <Font size="24.0"/>
-                    </font>
-                </Text>
-                <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Type">
-                    <font>
-                        <Font size="16.0"/>
-                    </font>
-                </Text>
-                <Text layoutX="15.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
-                    <font>
-                        <Font size="16.0"/>
-                    </font>
-                </Text>
-                <Text layoutX="15.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
-                    <font>
-                        <Font size="16.0"/>
-                    </font>
-                </Text>
-                <TextArea layoutX="15.0" layoutY="156.0" prefHeight="95.0" prefWidth="322.0"/>
-            </Pane>
-            <Pane layoutX="442.0" layoutY="61.0" prefHeight="270.0" prefWidth="350.0"
-                  style="-fx-background-color: #FFFFFF;">
-                <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name">
-                    <font>
-                        <Font size="24.0"/>
-                    </font>
-                </Text>
-                <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Type">
-                    <font>
-                        <Font size="16.0"/>
-                    </font>
-                </Text>
-                <Text layoutX="15.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
-                    <font>
-                        <Font size="16.0"/>
-                    </font>
-                </Text>
-                <Text layoutX="15.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
-                    <font>
-                        <Font size="16.0"/>
-                    </font>
-                </Text>
-                <TextArea layoutX="15.0" layoutY="156.0" prefHeight="95.0" prefWidth="322.0"/>
-            </Pane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alumni Network Access">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Text>
+            <Accordion layoutX="36.0" layoutY="114.0" prefHeight="78.0" prefWidth="794.0">
+              <panes>
+                <TitledPane animated="false" text="Alumni">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Alumni">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Alumni">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
         </AnchorPane>
     </center>
 </BorderPane>
