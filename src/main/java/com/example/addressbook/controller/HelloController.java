@@ -37,6 +37,27 @@ public class HelloController {
     }
 
     @FXML
+    private Hyperlink joinNowLinkk;
+
+    @FXML
+    public void handleJoinNoww() {
+        try {
+            Stage signupStage = new Stage();
+            signupStage.initModality(Modality.APPLICATION_MODAL);
+            signupStage.setTitle("Sign Up");
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/addressbook/test.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root, 500, 600);
+            signupStage.setScene(scene);
+            signupStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @FXML
     private Button loginButton;
     @FXML
     protected void onLoginButtonClick() throws IOException {
