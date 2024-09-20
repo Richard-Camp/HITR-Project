@@ -87,9 +87,8 @@ public class BannerController {
     @FXML
     protected void onLogOutButtonClick() throws IOException {
         Stage stage = (Stage) feedbackButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("feedback-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
-
 }
