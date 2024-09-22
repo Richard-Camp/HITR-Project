@@ -9,15 +9,16 @@ public class UserManager {
     public List<User> searchUsers(String query) {
         return userDAO.getAllUsers()
                 .stream()
-                .filter(user -> isContactMatched(user, query))
+                .filter(user -> isUserMatched(user, query))
                 .toList();
     }
 
-    private boolean isContactMatched(User user, String query) {
+    private boolean isUserMatched(User user, String query) {
         if (query == null || query.isEmpty()) return true;
         query = query.toLowerCase();
         String searchString = user.getUserName()
-                + " " + user.getEmail();
+                + " " + user.getEmail()
+                + " " + user.getPassword();
         return searchString.toLowerCase().contains(query);
     }
 

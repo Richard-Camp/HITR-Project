@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -110,137 +111,126 @@
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <VBox layoutX="66" layoutY="106" spacing ="100" prefWidth="990">
-               <HBox layoutX="66" layoutY="106" spacing ="70">
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+            <VBox layoutX="66" layoutY="106" prefWidth="990" spacing="100">
+               <HBox layoutX="66" layoutY="106" spacing="70">
+                  <VBox fx:id="QUTROBOTICSCLUB" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/QUTROBOTICSCLUB.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT ROBOTICS CLUB" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
                      </Text>
                   </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+                  <VBox fx:id="QUTSOCIETYOFENTREPRENEURS" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/QUTSOCIETYOFENTREPRENEURS.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT SOCIETY OF ENTREPRENEURS" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
                      </Text>
                   </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+                  <VBox fx:id="CODENETWORK" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/CODENETWORK.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CODE NETWORK" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
                      </Text>
                   </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-               </HBox>
-               <HBox layoutX="66" layoutY="106" spacing ="70">
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+                  <VBox fx:id="QUTREALITYLABS" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/QUTREALITYLABS.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT REALITY LABS" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
                      </Text>
                   </VBox>
                </HBox>
-               <HBox layoutX="66" layoutY="106" spacing ="70">
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+               <HBox layoutX="66" layoutY="106" spacing="70">
+                  <VBox fx:id="WOMENINTECHNOLOGYATQUT" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/WOMENINTECHNOLOGYATQUT.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WOMEN IN TECHNOLOGY AT QUT" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
                      </Text>
                   </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+                  <VBox fx:id="QUTELECTRICALENGINEERINGSTUDENTSOCIETY" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/QUTELECTRICALENGINEERINGSTUDENTSOCIETY.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT ELECTRICAL ENGINEERING STUDENT SOCIETY" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
                      </Text>
                   </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+                  <VBox fx:id="AIESECINQUT" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/AIESECINQUT.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AIESEC IN QUT" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
                      </Text>
                   </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-               </HBox>
-               <HBox layoutX="66" layoutY="106" spacing ="70">
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox prefHeight="181.0" prefWidth="157.0">
-                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="160.0" layoutX="66.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name" wrappingWidth="182.84765625">
+                  <VBox fx:id="QUTCHEMISTRYCLUB" prefHeight="181.0" prefWidth="157.0">
+                     <Button style="-fx-background-color: transparent;">
+                        <graphic>
+                           <ImageView fitHeight="160" fitWidth="160">
+                              <image>
+                                 <Image url="@../../../images/Club Images/QUTCHEMISTRYCLUB.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT CHEMISTRY CLUB" wrappingWidth="182.84765625">
                         <font>
                            <Font name="System Bold" size="16.0" />
                         </font>
