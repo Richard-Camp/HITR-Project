@@ -1,8 +1,6 @@
 package com.example.addressbook.model.Clubs;
 
 import com.example.addressbook.model.SqliteConnection;
-import com.example.addressbook.model.User.IUserDAO;
-import com.example.addressbook.model.User.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,7 +13,7 @@ public class SqliteClubDAO {
 
     private Connection connection;
 
-    public SqliteClubDAO(List<Club> clubs) {
+    public SqliteClubDAO(List<Job> clubs) {
         connection = SqliteConnection.getInstance();
         createTable();
         addClubs(clubs);
@@ -37,9 +35,9 @@ public class SqliteClubDAO {
             e.printStackTrace();
         }
     }
-    private void addClubs(List<Club> clubs){
+    private void addClubs(List<Job> clubs){
         try {
-            for(Club club : clubs) {
+            for(Job club : clubs) {
                 PreparedStatement statement = connection.prepareStatement("INSERT INTO clubs (clubName, category, interests, degree) VALUES (?, ?, ?, ?)");
                 statement.setString(1, club.getClubName());
                 statement.setString(2, club.getCategory());
@@ -55,8 +53,8 @@ public class SqliteClubDAO {
             e.printStackTrace();
         }
     }
-    public List<Club> getAllClubs() {
-        List<Club> clubs = new ArrayList<>();
+    public List<Job> getAllClubs() {
+        List<Job> clubs = new ArrayList<>();
         try {
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM clubs";
@@ -68,7 +66,7 @@ public class SqliteClubDAO {
                 String email = resultSet.getString("interests");
                 String degree = resultSet.getString("degree");
 
-                Club club = new Club(userName, password, email, degree);
+                Job club = new Job(userName, password, email, degree);
                 club.setId(id);
                 clubs.add(club);
             }

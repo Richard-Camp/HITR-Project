@@ -1,13 +1,13 @@
 package com.example.addressbook.model.Clubs;
 
-public class Club {
+public class Job {
     private int id;
     private String clubName;
     private String category;
     private String interests;
     private String degree;
 
-    public Club(String clubName, String category, String interests, String degree) {
+    public Job(String clubName, String category, String interests, String degree) {
         this.clubName = clubName;
         this.category = category;
         this.interests = interests;
