@@ -1,11 +1,15 @@
 package com.example.addressbook;
-
+import com.example.addressbook.model.Clubs.Club;
+import com.example.addressbook.model.Clubs.SqliteClubDAO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.sql.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelloApplication extends Application {
     public static final String TITLE = "CareerLaunch";
@@ -21,6 +25,8 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        Club QUTROBOTICSCLUB = new Club("QUTROBOTICSCLUB", "STEM", "Coding")
+        List<Club> clubs = new ArrayList<>();
+        SqliteClubDAO clubDAO = new SqliteClubDAO(clubs);
     }
 }
