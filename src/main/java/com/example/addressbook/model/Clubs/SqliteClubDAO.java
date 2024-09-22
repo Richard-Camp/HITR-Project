@@ -16,6 +16,7 @@ public class SqliteClubDAO {
     public SqliteClubDAO(List<Club> clubs) {
         connection = SqliteConnection.getInstance();
         createTable();
+        addClubs(clubs);
     }
 
     private void createTable() {

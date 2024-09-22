@@ -61,7 +61,7 @@ public class SqliteJobDAO {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String userName = resultSet.getString("jobName");
+                String userName = resultSet.getString("clubName");
                 String password = resultSet.getString("category");
                 String email = resultSet.getString("interests");
                 String degree = resultSet.getString("degree");
