@@ -13,7 +13,7 @@ public class SqliteClubDAO {
 
     private Connection connection;
 
-    public SqliteClubDAO(List<Job> clubs) {
+    public SqliteClubDAO(List<Club> clubs) {
         connection = SqliteConnection.getInstance();
         createTable();
         addClubs(clubs);
@@ -35,9 +35,9 @@ public class SqliteClubDAO {
             e.printStackTrace();
         }
     }
-    private void addClubs(List<Job> clubs){
+    private void addClubs(List<Club> clubs){
         try {
-            for(Job club : clubs) {
+            for(Club club : clubs) {
                 PreparedStatement statement = connection.prepareStatement("INSERT INTO clubs (clubName, category, interests, degree) VALUES (?, ?, ?, ?)");
                 statement.setString(1, club.getClubName());
                 statement.setString(2, club.getCategory());
@@ -53,8 +53,8 @@ public class SqliteClubDAO {
             e.printStackTrace();
         }
     }
-    public List<Job> getAllClubs() {
-        List<Job> clubs = new ArrayList<>();
+    public List<Club> getAllClubs() {
+        List<Club> clubs = new ArrayList<>();
         try {
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM clubs";
@@ -66,7 +66,7 @@ public class SqliteClubDAO {
                 String email = resultSet.getString("interests");
                 String degree = resultSet.getString("degree");
 
-                Job club = new Job(userName, password, email, degree);
+                Club club = new Club(userName, password, email, degree);
                 club.setId(id);
                 clubs.add(club);
             }
