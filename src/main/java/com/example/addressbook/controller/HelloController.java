@@ -30,7 +30,7 @@ public class HelloController {
             Parent root = loader.load();
             Scene scene = new Scene(root, 500, 600);
             // Set the stage to be non-resizable
-            signupStage.setResizable(false);
+            signupStage.setResizable(true);
             signupStage.setScene(scene);
             signupStage.show();
         } catch (Exception e) {
