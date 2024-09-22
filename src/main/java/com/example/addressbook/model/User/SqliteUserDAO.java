@@ -1,4 +1,6 @@
-package com.example.addressbook.model;
+package com.example.addressbook.model.User;
+
+import com.example.addressbook.model.SqliteConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ public class SqliteUserDAO implements IUserDAO {
         try {
             Statement statement = connection.createStatement();
             String query = "CREATE TABLE IF NOT EXISTS users ("
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + "userName VARCHAR NOT NULL,"
                     + "password VARCHAR NOT NULL,"
                     + "email VARCHAR NOT NULL"
@@ -31,22 +34,25 @@ public class SqliteUserDAO implements IUserDAO {
     public void addUser(User user) {
         try {
             PreparedStatement statement = connection.prepareStatement("INSERT INTO users (userName, password, email) VALUES (?, ?, ?)");
-            statement.setInt(1, user.getId());
-            statement.setString(2, user.getUserName());
-            statement.setString(3, user.getPassword());
-            statement.setString(4, user.getEmail());
+            statement.setString(1, user.getUserName());
+            statement.setString(2, user.getPassword());
+            statement.setString(3, user.getEmail());
             statement.executeUpdate();
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if(generatedKeys.next()){
+                user.setId(generatedKeys.getInt(1));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
     public void updateUser(User user) {
         try {
-            PreparedStatement statement = connection.prepareStatement("UPDATE users SET id userName = ?, password = ?, email = ?");
-            statement.setInt(1, user.getId());
-            statement.setString(2, user.getUserName());
-            statement.setString(3, user.getPassword());
-            statement.setString(4, user.getEmail());
+            PreparedStatement statement = connection.prepareStatement("UPDATE users SET userName = ?, password = ?, email = ? WHERE id = ?");
+            statement.setString(1, user.getUserName());
+            statement.setString(2, user.getPassword());
+            statement.setString(3, user.getEmail());
+            statement.setInt(4, user.getId());
             statement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,7 +62,7 @@ public class SqliteUserDAO implements IUserDAO {
     @Override
     public void deleteUser(User user) {
         try {
-            PreparedStatement statement = connection.prepareStatement("DELETE FROM contacts WHERE id = ?");
+            PreparedStatement statement = connection.prepareStatement("DELETE FROM users WHERE id = ?");
             statement.setInt(1, user.getId());
             statement.executeUpdate();
         } catch (Exception e) {
@@ -65,19 +71,18 @@ public class SqliteUserDAO implements IUserDAO {
     }
 
     @Override
-    public Contact getContact(int id) {
+    public User getUser(int id) {
         try {
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM contacts WHERE id = ?");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE id = ?");
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                String firstName = resultSet.getString("firstName");
-                String lastName = resultSet.getString("lastName");
-                String phone = resultSet.getString("phone");
+                String username = resultSet.getString("username");
+                String password = resultSet.getString("password");
                 String email = resultSet.getString("email");
-                Contact contact = new Contact(firstName, lastName, phone, email);
-                contact.setId(id);
-                return contact;
+                User user = new User(username, password, email);
+                user.setId(id);
+                return user;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -86,25 +91,24 @@ public class SqliteUserDAO implements IUserDAO {
     }
 
     @Override
-    public List<Contact> getAllContacts() {
-        List<Contact> contacts = new ArrayList<>();
+    public List<User> getAllUsers() {
+        List<User> users = new ArrayList<>();
         try {
             Statement statement = connection.createStatement();
-            String query = "SELECT * FROM contacts";
+            String query = "SELECT * FROM users";
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String firstName = resultSet.getString("firstName");
-                String lastName = resultSet.getString("lastName");
-                String phone = resultSet.getString("phone");
+                String userName = resultSet.getString("userName");
+                String password = resultSet.getString("password");
                 String email = resultSet.getString("email");
-                Contact contact = new Contact(firstName, lastName, phone, email);
-                contact.setId(id);
-                contacts.add(contact);
+                User user = new User(userName, password, email);
+                user.setId(id);
+                users.add(user);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return contacts;
+        return users;
     }
 }

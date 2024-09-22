@@ -1,4 +1,4 @@
-package com.example.addressbook.model;
+package com.example.addressbook.model.User;
 
 public class User {
     private int id;
@@ -6,8 +6,7 @@ public class User {
     private String password;
     private String email;
 
-    public User(int id, String userName, String password, String email) {
-        this.id = id;
+    public User(String userName, String password, String email) {
         this.userName = userName;
         this.password = password;
         this.email = email;
@@ -17,9 +16,11 @@ public class User {
         return id;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setId(int id) {
+        this.id = id;
     }
+
+    public String getUserName() {return userName;}
 
     public void setUserName(String userName) {
         this.userName = userName;
