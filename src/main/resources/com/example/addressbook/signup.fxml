@@ -5,11 +5,10 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:controller="com.example.addressbook.controller.SignupController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="793.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addressbook.controller.SignupController">
    <children>
       <Text fill="#4d4949" layoutX="179.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
          <font>
@@ -31,11 +30,11 @@
             <Font size="16.0" />
          </font>
       </TextField>
-      <Button layoutX="187.0" layoutY="438.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #0598ff; -fx-background-radius: 25;" text="SIGN UP" textFill="WHITE" onAction="#onSignUp">
+      <Button layoutX="187.0" layoutY="438.0" mnemonicParsing="false" onAction="#onSignUp" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #0598ff; -fx-background-radius: 25;" text="SIGN UP" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <ListView fx:id="contactsListView" layoutX="420.0" layoutY="50.0" prefHeight="500.0" prefWidth="200.0"/>
+      <ListView fx:id="contactsListView" layoutX="420.0" layoutY="50.0" prefHeight="500.0" prefWidth="349.0" />
    </children>
 </AnchorPane>

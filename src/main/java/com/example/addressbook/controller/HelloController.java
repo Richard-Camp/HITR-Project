@@ -28,7 +28,7 @@ public class HelloController {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/addressbook/signup.fxml"));
             Parent root = loader.load();
-            Scene scene = new Scene(root, 500, 600);
+            Scene scene = new Scene(root, 800, 600);
             // Set the stage to be non-resizable
             signupStage.setResizable(true);
             signupStage.setScene(scene);
