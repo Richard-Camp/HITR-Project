@@ -13,78 +13,78 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addressbook.controller.HelloController">
-  <left>
-    <AnchorPane prefHeight="720.0" prefWidth="830.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="879.0" fitWidth="975.0" layoutX="-145.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/test.JPG" />
-               </image>
-            </ImageView>
-        <Text fill="WHITE" layoutX="84.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CareerLaunch">
-          <font>
-            <Font size="70.0" />
-          </font>
-        </Text>
-        <Text fill="WHITE" layoutX="88.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explore a comprehensive portal featuring a variety of resources designed to support your job search and professional development." wrappingWidth="673.13671875">
-          <font>
-            <Font size="20.0" />
-          </font></Text>
-        <Hyperlink layoutX="303.0" layoutY="444.0" onAction="#handleJoinNow" text="Join Now" textFill="WHITE">
-          <font>
-            <Font size="20.0" />
-          </font></Hyperlink>
-        <Text fill="WHITE" layoutX="89.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New to CareerLaunch?">
-          <font>
-            <Font size="20.0" />
-          </font></Text>
-            <Text fill="WHITE" layoutX="88.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <Line endX="386.0" layoutX="189.0" layoutY="421.0" startX="-100.0" stroke="WHITE" />
-         </children></AnchorPane>
-  </left>
-  <right>
-    <AnchorPane prefHeight="720.0" prefWidth="450.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
-      <children>
-        <Button fx:id="loginButton" layoutX="289.0" layoutY="520.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #143856; -fx-background-radius: 30;" text="Login" textFill="WHITE">
-          <font>
-            <Font size="16.0" />
-          </font></Button>
-        <Hyperlink layoutX="79.0" layoutY="525.0" onAction="#handleJoinNoww" text="Forgot Your Password ?">
-               <font>
-                  <Font size="15.0" />
-               </font></Hyperlink>
-        <TextField layoutX="79.0" layoutY="335.0" prefHeight="50.0" prefWidth="310.0" promptText="Email" style="-fx-background-color: white; -fx-border-color: #efefef; -fx-border-width: 0px 0px 0px 0px; -fx-background-radius: 30;">
-          <font>
-            <Font size="18.0" />
-          </font></TextField>
-        <PasswordField layoutX="79.0" layoutY="429.0" prefHeight="50.0" prefWidth="310.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 0px 0px; -fx-background-radius: 30;">
-          <font>
-            <Font size="18.0" />
-          </font></PasswordField>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="150.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/rock.png" />
-               </image>
-            </ImageView>
-        <Text layoutX="92.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in to CareerLaunch">
-          <font>
-            <Font size="26.0" />
-          </font>
-        </Text>
-            <ImageView fitHeight="40.0" fitWidth="90.0" layoutX="23.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/email.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="23.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/pass.png" />
-               </image>
-            </ImageView>
-      </children></AnchorPane>
-  </right>
+    <left>
+        <AnchorPane prefHeight="720.0" prefWidth="830.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="879.0" fitWidth="975.0" layoutX="-145.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/test.JPG" />
+                    </image>
+                </ImageView>
+                <Text fill="WHITE" layoutX="84.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CareerLaunch">
+                    <font>
+                        <Font size="70.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="88.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explore a comprehensive portal featuring a variety of resources designed to support your job search and professional development." wrappingWidth="673.13671875">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Text>
+                <Hyperlink layoutX="303.0" layoutY="444.0" onAction="#handleJoinNow" text="Join Now" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Hyperlink>
+                <Text fill="WHITE" layoutX="89.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New to CareerLaunch?">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Text>
+                <Text fill="WHITE" layoutX="88.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Text>
+                <Line endX="386.0" layoutX="189.0" layoutY="421.0" startX="-100.0" stroke="WHITE" />
+            </children></AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="720.0" prefWidth="450.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="loginButton" layoutX="289.0" layoutY="520.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #143856; -fx-background-radius: 30;" text="Login" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Hyperlink layoutX="79.0" layoutY="525.0" onAction="#handleJoinNoww" text="Forgot Your Password ?">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Hyperlink>
+                <TextField fx:id="emailTextField"  layoutX="79.0" layoutY="335.0" prefHeight="50.0" prefWidth="310.0" promptText="Email" style="-fx-background-color: white; -fx-border-color: #efefef; -fx-border-width: 0px 0px 0px 0px; -fx-background-radius: 30;">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <PasswordField fx:id="passwordField" layoutX="79.0" layoutY="429.0" prefHeight="50.0" prefWidth="310.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 0px 0px; -fx-background-radius: 30;">
+                    <font>
+                        <Font size="18.0" />
+                    </font></PasswordField>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="150.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/rock.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="92.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in to CareerLaunch">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="40.0" fitWidth="90.0" layoutX="23.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/email.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="23.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/pass.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+    </right>
 </BorderPane>
