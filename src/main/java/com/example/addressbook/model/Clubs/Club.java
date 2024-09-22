@@ -5,13 +5,11 @@ public class Club {
     private String clubName;
     private String category;
     private String interests;
-    private String degree;
 
-    public Club(String clubName, String category, String interests, String degree) {
+    public Club(String clubName, String category, String interests) {
         this.clubName = clubName;
         this.category = category;
         this.interests = interests;
-        this.degree = degree;
     }
 
     public int getId() {
@@ -41,9 +39,5 @@ public class Club {
     public void setInterests(String interests) {
         this.interests = interests;
     }
-
-    public String getDegree(){return degree;}
-
-    public void setDegree(String degree){this.degree = degree;}
 
 }

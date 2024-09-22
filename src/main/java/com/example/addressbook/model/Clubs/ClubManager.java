@@ -17,8 +17,7 @@ public class ClubManager {
         query = query.toLowerCase();
         String searchString = club.getClubName()
                 + " " + club.getCategory()
-                + " " + club.getInterests()
-                + " " + club.getDegree();
+                + " " + club.getInterests();
         return searchString.toLowerCase().contains(query);
     }
 }

@@ -25,7 +25,8 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        Club QUTROBOTICSCLUB = new Club("QUTROBOTICSCLUB", "STEM", "Coding")
+        Club QUTROBOTICSCLUB = new Club("QUTROBOTICSCLUB", "STEM", "Coding");
+        Club QUTSOCIETYOFENTREPRENEURS = new Club("QUTSOCIETYOFENTREPRENEURS", "Career", "Learning");
         List<Club> clubs = new ArrayList<>();
         SqliteClubDAO clubDAO = new SqliteClubDAO(clubs);
     }
