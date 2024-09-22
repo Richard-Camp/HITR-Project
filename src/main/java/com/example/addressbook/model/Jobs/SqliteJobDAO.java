@@ -1,4 +1,4 @@
-package com.example.addressbook.model.Clubs;
+package com.example.addressbook.model.Jobs;
 
 import com.example.addressbook.model.SqliteConnection;
 
@@ -39,7 +39,7 @@ public class SqliteJobDAO {
         try {
             for(Job job : jobs) {
                 PreparedStatement statement = connection.prepareStatement("INSERT INTO jobs (clubName, category, interests, degree) VALUES (?, ?, ?, ?)");
-                statement.setString(1, job.getClubName());
+                statement.setString(1, job.getJobName());
                 statement.setString(2, job.getCategory());
                 statement.setString(3, job.getInterests());
                 statement.setString(4, job.getDegree());
@@ -61,7 +61,7 @@ public class SqliteJobDAO {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String userName = resultSet.getString("clubName");
+                String userName = resultSet.getString("jobName");
                 String password = resultSet.getString("category");
                 String email = resultSet.getString("interests");
                 String degree = resultSet.getString("degree");
