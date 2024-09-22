@@ -48,17 +48,17 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <CheckBox layoutX="38.0" layoutY="159.0" mnemonicParsing="false" text="Engineering" textFill="WHITE">
+            <CheckBox fx:id="EngineeringCheckBox" onAction="#EngineeringCheck" layoutX="38.0" layoutY="159.0" mnemonicParsing="false" text="Engineering" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="38.0" layoutY="192.0" mnemonicParsing="false" text="STEM" textFill="WHITE">
+            <CheckBox fx:id="STEMCheckBox" onAction="#STEMCheck" layoutX="38.0" layoutY="192.0" mnemonicParsing="false" text="STEM" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="38.0" layoutY="227.0" mnemonicParsing="false" text="Career" textFill="WHITE">
+            <CheckBox fx:id="CareerCheckBox" onAction="#CareerCheck" layoutX="38.0" layoutY="227.0" mnemonicParsing="false" text="Career" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
@@ -68,33 +68,26 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <CheckBox layoutX="39.0" layoutY="302.0" mnemonicParsing="false" text="Coding" textFill="WHITE">
+            <CheckBox fx:id="CodingCheckBox" onAction="#CodingCheck" layoutX="39.0" layoutY="302.0" mnemonicParsing="false" text="Coding" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="39.0" layoutY="334.0" mnemonicParsing="false" text="Writing" textFill="WHITE">
+            <CheckBox fx:id="WritingCheckBox" onAction="#WritingCheck" layoutX="39.0" layoutY="334.0" mnemonicParsing="false" text="Writing" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="39.0" layoutY="365.0" mnemonicParsing="false" text="Learning" textFill="WHITE">
+            <CheckBox fx:id="LearningCheckBox" onAction="#LearningCheck" layoutX="39.0" layoutY="365.0" mnemonicParsing="false" text="Learning" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="39.0" layoutY="395.0" mnemonicParsing="false" text="Reading" textFill="WHITE">
+            <CheckBox fx:id="ReadingCheckBox" onAction="#ReadingCheck" layoutX="39.0" layoutY="395.0" mnemonicParsing="false" text="Reading" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </CheckBox>
-            <Text fill="WHITE" layoutX="37.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <ChoiceBox layoutX="37.0" layoutY="475.0" prefWidth="150.0" />
-            <TextField layoutX="29.0" layoutY="35.0" />
             <Text fill="WHITE" layoutX="76.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
                <font>
                   <Font size="16.0" />
@@ -111,7 +104,7 @@
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <VBox layoutX="66" layoutY="106" prefWidth="990" spacing="100">
+            <VBox fx:id="ClubGrid" layoutX="66" layoutY="106" prefWidth="990" spacing="100">
                <HBox layoutX="66" layoutY="106" spacing="70">
                   <VBox fx:id="QUTROBOTICSCLUB" prefHeight="181.0" prefWidth="157.0">
                      <Button style="-fx-background-color: transparent;">

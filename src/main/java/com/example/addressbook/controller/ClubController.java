@@ -1,15 +1,76 @@
 package com.example.addressbook.controller;
 
 import com.example.addressbook.HelloApplication;
+import com.example.addressbook.model.Clubs.*;
+import com.example.addressbook.model.User.UserManager;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class ClubController {
+    ClubManager clubManager;
+
+    public ClubController() {
+        clubManager = new ClubManager(new SqliteClubDAO());
+    }
+    @FXML
+    private VBox QUTROBOTICSCLUB;
+    @FXML
+    private VBox QUTSOCIETYOFENTREPRENEURS;
+    @FXML
+    private VBox CODENETWORK;
+    @FXML
+    private VBox QUTREALITYLABS;
+    @FXML
+    private VBox WOMENINTECHNOLOGYATQUT;
+    @FXML
+    private VBox QUTELECTRICALENGINEERINGSTUDENTSOCIETY;
+    @FXML
+    private VBox AIESECINQUT;
+    @FXML
+    private VBox QUTCHEMISTRYCLUB;
+    @FXML
+    private CheckBox EngineeringCheckBox;
+    @FXML
+    private CheckBox STEMCheckBox;
+    @FXML
+    private CheckBox CareerCheckBox;
+    @FXML
+    private CheckBox CodingCheckBox;
+
+    @FXML
+    private CheckBox ReadingCheckBox;
+    @FXML
+    private CheckBox WritingCheckBox;
+    @FXML
+    private CheckBox LearningCheckBox;
+    @FXML
+    private VBox ClubGrid;
+    @FXML
+    protected void EngineeringCheck(){}
+    @FXML
+    protected void STEMCheck(){}
+    @FXML
+    protected void CareerCheck(){}
+    @FXML
+    protected void LearningCheck(){}
+    @FXML
+    protected void ReadingCheck(){}
+    @FXML
+    protected void CodingCheck(){}
+    @FXML
+    protected void WritingCheck(){}
     @FXML
     private ToggleButton clubButton;
     @FXML

@@ -13,10 +13,10 @@ public class SqliteClubDAO {
 
     private Connection connection;
 
-    public SqliteClubDAO(List<Club> clubs) {
+    public SqliteClubDAO() {
         connection = SqliteConnection.getInstance();
         createTable();
-        addClubs(clubs);
+        addClubs();
     }
 
     private void createTable() {
@@ -34,8 +34,26 @@ public class SqliteClubDAO {
             e.printStackTrace();
         }
     }
-    private void addClubs(List<Club> clubs){
+    private void addClubs(){
         try {
+
+            List<Club> clubs = new ArrayList<>();
+            Club QUTROBOTICSCLUB = new Club("QUTROBOTICSCLUB", "STEM", "Coding");
+            clubs.add(QUTROBOTICSCLUB);
+            Club QUTSOCIETYOFENTREPRENEURS = new Club("QUTSOCIETYOFENTREPRENEURS", "Career", "Learning");
+            clubs.add(QUTSOCIETYOFENTREPRENEURS);
+            Club CODENETWORK = new Club("CODENETWORK", "STEM", "Coding");
+            clubs.add(CODENETWORK);
+            Club QUTREALITYLABS = new Club("QUTREALITYLABS", "STEM", "Coding");
+            clubs.add(QUTREALITYLABS);
+            Club WOMENINTEHNOLOGYATQUT = new Club("WOMENINTEHNOLOGYATQUT", "STEM", "Coding");
+            clubs.add(WOMENINTEHNOLOGYATQUT);
+            Club QUTELECTRICALENGINEERINGSOCIETY = new Club("QUTELECTRICALENGINEERINGSOCIETY", "Engineering", "Learning");
+            clubs.add(QUTELECTRICALENGINEERINGSOCIETY);
+            Club AIESECINQUT = new Club("AIESECINQUT", "Career", "Learning");
+            clubs.add(AIESECINQUT);
+            Club QUTCHEMISTRYCLUB = new Club("QUTCHEMISTRYCLUB", "STEM", "Learning");
+            clubs.add(QUTCHEMISTRYCLUB);
             for(Club club : clubs) {
                 PreparedStatement statement = connection.prepareStatement("INSERT INTO clubs (clubName, category, interests) VALUES (?, ?, ?)");
                 statement.setString(1, club.getClubName());
