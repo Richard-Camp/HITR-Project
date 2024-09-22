@@ -14,6 +14,8 @@ public class SqliteUserDAO implements IUserDAO {
         createTable();
     }
 
+
+
     private void createTable() {
         // Create table if not exists
         try {
@@ -89,6 +91,8 @@ public class SqliteUserDAO implements IUserDAO {
         }
         return null;
     }
+
+
 
     @Override
     public List<User> getAllUsers() {
