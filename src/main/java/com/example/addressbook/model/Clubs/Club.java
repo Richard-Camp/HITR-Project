@@ -5,11 +5,15 @@ public class Club {
     private String clubName;
     private String category;
     private String interests;
+    private String clubImage;
+    private String clubWebsite;
 
-    public Club(String clubName, String category, String interests) {
+    public Club(String clubName, String category, String interests, String clubImage, String clubWebsite) {
         this.clubName = clubName;
         this.category = category;
         this.interests = interests;
+        this.clubImage = clubImage;
+        this.clubWebsite = clubWebsite;
     }
 
     public int getId() {
@@ -40,4 +44,19 @@ public class Club {
         this.interests = interests;
     }
 
+    public String getClubImage(){
+        return clubImage;
+    }
+
+    public void setClubImage(String clubImage){
+        this.clubImage = clubImage;
+    }
+
+    public String getClubWebsite(){
+        return clubWebsite;
+    }
+
+    public void setClubWebsite(String clubWebsite){
+        this.clubWebsite = clubWebsite;
+    }
 }

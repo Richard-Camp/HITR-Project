@@ -2,77 +2,141 @@ package com.example.addressbook.controller;
 
 import com.example.addressbook.HelloApplication;
 import com.example.addressbook.model.Clubs.*;
-import com.example.addressbook.model.User.UserManager;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.layout.HBox;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.image.*;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.*;
 import java.util.List;
 
 public class ClubController {
-    ClubManager clubManager;
 
-    public ClubController() {
-        clubManager = new ClubManager(new SqliteClubDAO());
-    }
-    @FXML
-    private VBox QUTROBOTICSCLUB;
-    @FXML
-    private VBox QUTSOCIETYOFENTREPRENEURS;
-    @FXML
-    private VBox CODENETWORK;
-    @FXML
-    private VBox QUTREALITYLABS;
-    @FXML
-    private VBox WOMENINTECHNOLOGYATQUT;
-    @FXML
-    private VBox QUTELECTRICALENGINEERINGSTUDENTSOCIETY;
-    @FXML
-    private VBox AIESECINQUT;
-    @FXML
-    private VBox QUTCHEMISTRYCLUB;
-    @FXML
-    private CheckBox EngineeringCheckBox;
-    @FXML
-    private CheckBox STEMCheckBox;
-    @FXML
-    private CheckBox CareerCheckBox;
-    @FXML
-    private CheckBox CodingCheckBox;
+    private ClubManager clubManager;
 
     @FXML
-    private CheckBox ReadingCheckBox;
+    private RadioButton EngineeringRadioBox;
     @FXML
-    private CheckBox WritingCheckBox;
+    private RadioButton STEMRadioBox;
     @FXML
-    private CheckBox LearningCheckBox;
-    @FXML
-    private VBox ClubGrid;
-    @FXML
-    protected void EngineeringCheck(){}
-    @FXML
-    protected void STEMCheck(){}
-    @FXML
-    protected void CareerCheck(){}
-    @FXML
-    protected void LearningCheck(){}
-    @FXML
-    protected void ReadingCheck(){}
-    @FXML
-    protected void CodingCheck(){}
-    @FXML
-    protected void WritingCheck(){}
+    private RadioButton CareerRadioBox;
     @FXML
     private ToggleButton clubButton;
+    @FXML
+    private FlowPane VboxFlowPane;
+    @FXML
+    private TextField searchBar;
+    @FXML
+    private Button searchButton;
+
+    public ClubController(){
+        SqliteClubDAO clubDAO = new SqliteClubDAO();
+        clubManager = new ClubManager(clubDAO);
+    }
+
+    public void initialize() {
+        displayClubs(clubManager.searchClubs(null));
+    }
+
+
+    private void displayClubs(List<Club> clubs){
+        VboxFlowPane.getChildren().clear();
+        for (Club club : clubs){
+            VBox clubVBox = createClubVBox(club);
+            VboxFlowPane.getChildren().add(clubVBox);
+        }
+    }
+
+    private VBox createClubVBox(Club club){
+
+        VBox vbox = new VBox();
+
+        Button imageButton = new Button();
+        imageButton.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
+        String imagePath = club.getClubImage();
+        URL imageURL = getClass().getResource(imagePath);
+        if(imageURL == null){return vbox;}
+        ImageView imageView = new ImageView(new Image(imageURL.toExternalForm()));
+        imageView.setFitHeight(160);
+        imageView.setFitWidth(160);
+        imageButton.setGraphic(imageView);
+
+        imageButton.setOnAction(event -> {
+            try {
+                URI url = new URI(club.getClubWebsite());
+
+                if (Desktop.isDesktopSupported()) {
+                    Desktop.getDesktop().browse(url);
+                } else {
+                    System.out.println("Desktop is not supported. Cannot open the link.");
+                }
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Label clubNameLabel = new Label(club.getClubName());
+
+        vbox.getChildren().addAll(imageButton,clubNameLabel);
+
+        return vbox;
+    }
+
+
+    @FXML
+    protected void EngineeringCheck(){
+        if(EngineeringRadioBox.isSelected()){
+            STEMRadioBox.setSelected(false);
+            CareerRadioBox.setSelected(false);
+            displayClubs(clubManager.searchClubs("engineering"));
+        }
+        else {
+            displayClubs(clubManager.searchClubs(null));
+        }
+    }
+    @FXML
+    protected void STEMCheck(){
+        if(STEMRadioBox.isSelected()){
+            EngineeringRadioBox.setSelected(false);
+            CareerRadioBox.setSelected(false);
+            displayClubs(clubManager.searchClubs("stem"));
+        }
+        else {
+            displayClubs(clubManager.searchClubs(null));
+        }
+    }
+    @FXML
+    protected void CareerCheck() {
+        if(CareerRadioBox.isSelected()){
+            STEMRadioBox.setSelected(false);
+            EngineeringRadioBox.setSelected(false);
+            displayClubs(clubManager.searchClubs("career"));
+        }
+        else {
+            displayClubs(clubManager.searchClubs(null));
+        }
+    }
+    @FXML
+    public void onSearchClick() {
+        displayClubs(clubManager.searchClubs(searchBar.getText()));
+    }
+
     @FXML
     protected void onClubButtonClick() throws IOException {
         Stage stage = (Stage) clubButton.getScene().getWindow();

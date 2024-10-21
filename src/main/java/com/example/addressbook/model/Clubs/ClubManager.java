@@ -9,9 +9,10 @@ public class ClubManager {
     public List<Club> searchClubs(String query) {
         return clubDAO.getAllClubs()
                 .stream()
-                .filter(user -> isClubMatched(user, query))
+                .filter(club -> isClubMatched(club, query))
                 .toList();
     }
+
     private boolean isClubMatched(Club club, String query) {
         if (query == null || query.isEmpty()) return true;
         query = query.toLowerCase();

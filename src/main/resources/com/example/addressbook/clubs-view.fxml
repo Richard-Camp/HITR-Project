@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane prefHeight="720" prefWidth="1280" stylesheets="@style2.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addressbook.controller.ClubController">
@@ -48,189 +46,39 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <CheckBox fx:id="EngineeringCheckBox" onAction="#EngineeringCheck" layoutX="38.0" layoutY="159.0" mnemonicParsing="false" text="Engineering" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="STEMCheckBox" onAction="#STEMCheck" layoutX="38.0" layoutY="192.0" mnemonicParsing="false" text="STEM" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="CareerCheckBox" onAction="#CareerCheck" layoutX="38.0" layoutY="227.0" mnemonicParsing="false" text="Career" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </CheckBox>
-            <Text fill="WHITE" layoutX="37.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interests">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <CheckBox fx:id="CodingCheckBox" onAction="#CodingCheck" layoutX="39.0" layoutY="302.0" mnemonicParsing="false" text="Coding" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="WritingCheckBox" onAction="#WritingCheck" layoutX="39.0" layoutY="334.0" mnemonicParsing="false" text="Writing" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="LearningCheckBox" onAction="#LearningCheck" layoutX="39.0" layoutY="365.0" mnemonicParsing="false" text="Learning" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="ReadingCheckBox" onAction="#ReadingCheck" layoutX="39.0" layoutY="395.0" mnemonicParsing="false" text="Reading" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </CheckBox>
-            <Text fill="WHITE" layoutX="76.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Text>
+            <VBox layoutX="38.0" layoutY="159.0" spacing="15">
+               <RadioButton fx:id="EngineeringRadioBox" layoutX="38.0" layoutY="159.0" mnemonicParsing="false" onAction="#EngineeringCheck" text="Engineering" textFill="WHITE">
+                   <font>
+                      <Font size="15.0" />
+                   </font>
+                </RadioButton>
+                <RadioButton fx:id="STEMRadioBox" layoutX="38.0" layoutY="192.0" mnemonicParsing="false" onAction="#STEMCheck" text="STEM" textFill="WHITE">
+                   <font>
+                      <Font size="15.0" />
+                   </font>
+                </RadioButton>
+                <RadioButton fx:id="CareerRadioBox" layoutX="38.0" layoutY="227.0" mnemonicParsing="false" onAction="#CareerCheck" text="Career" textFill="WHITE">
+                   <font>
+                      <Font size="15.0" />
+                   </font>
+                </RadioButton>
+            </VBox>
+            <HBox spacing="5" layoutX="10" layoutY="10">
+                <TextField fx:id="searchBar" promptText="Search..." />
+                <Button fx:id="searchButton" onAction="#onSearchClick" text="Search" />
+            </HBox>
          </children>
       </AnchorPane>
    </left>
    <center>
-      <ScrollPane>
-         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
+      <ScrollPane fitToHeight="true">
+         <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;-fx-padding:30;" BorderPane.alignment="CENTER">
             <Text fill="#663399" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clubs" wrappingWidth="131.7578125">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <VBox fx:id="ClubGrid" layoutX="66" layoutY="106" prefWidth="990" spacing="100">
-               <HBox layoutX="66" layoutY="106" spacing="70">
-                  <VBox fx:id="QUTROBOTICSCLUB" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/QUTROBOTICSCLUB.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT ROBOTICS CLUB" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox fx:id="QUTSOCIETYOFENTREPRENEURS" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/QUTSOCIETYOFENTREPRENEURS.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT SOCIETY OF ENTREPRENEURS" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox fx:id="CODENETWORK" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/CODENETWORK.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CODE NETWORK" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox fx:id="QUTREALITYLABS" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/QUTREALITYLABS.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT REALITY LABS" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-               </HBox>
-               <HBox layoutX="66" layoutY="106" spacing="70">
-                  <VBox fx:id="WOMENINTECHNOLOGYATQUT" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/WOMENINTECHNOLOGYATQUT.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WOMEN IN TECHNOLOGY AT QUT" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox fx:id="QUTELECTRICALENGINEERINGSTUDENTSOCIETY" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/QUTELECTRICALENGINEERINGSTUDENTSOCIETY.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT ELECTRICAL ENGINEERING STUDENT SOCIETY" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox fx:id="AIESECINQUT" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/AIESECINQUT.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AIESEC IN QUT" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-                  <VBox fx:id="QUTCHEMISTRYCLUB" prefHeight="181.0" prefWidth="157.0">
-                     <Button style="-fx-background-color: transparent;">
-                        <graphic>
-                           <ImageView fitHeight="160" fitWidth="160">
-                              <image>
-                                 <Image url="@../../../images/Club Images/QUTCHEMISTRYCLUB.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUT CHEMISTRY CLUB" wrappingWidth="182.84765625">
-                        <font>
-                           <Font name="System Bold" size="16.0" />
-                        </font>
-                     </Text>
-                  </VBox>
-               </HBox>
-            </VBox>
+            <FlowPane fx:id="VboxFlowPane" hgap="70" layoutX="66" layoutY="106" prefWidth="990" vgap="100" />
          </AnchorPane>
       </ScrollPane>
    </center>
