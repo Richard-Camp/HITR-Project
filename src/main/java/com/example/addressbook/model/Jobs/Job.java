@@ -4,14 +4,20 @@ public class Job {
     private int id;
     private String jobName;
     private String category;
-    private String interests;
+    private Integer salary;
     private String degree;
+    private String companyWebsite;
+    private String company;
+    private String description;
 
-    public Job(String jobName, String category, String interests, String degree) {
+    public Job(String jobName, String category, Integer salary, String degree, String company, String companyWebsite, String description) {
         this.jobName = jobName;
         this.category = category;
-        this.interests = interests;
+        this.salary = salary;
         this.degree = degree;
+        this.companyWebsite = companyWebsite;
+        this.company = company;
+        this.description = description;
     }
 
     public int getId() {
@@ -24,8 +30,8 @@ public class Job {
 
     public String getJobName() {return jobName;}
 
-    public void setJobName(String clubName) {
-        this.jobName = clubName;
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
     }
 
     public String getCategory() {return category;}
@@ -34,16 +40,43 @@ public class Job {
         this.category = category;
     }
 
-    public String getInterests() {
-        return interests;
+    public Integer getSalary() {
+        return salary;
     }
 
-    public void setInterests(String interests) {
-        this.interests = interests;
+    public void setSalary(Integer salary) {
+        this.salary = salary;
     }
 
-    public String getDegree(){return degree;}
+    public String getDegree(){
+        return degree;
+    }
 
-    public void setDegree(String degree){this.degree = degree;}
+    public void setDegree(String degree){
+        this.degree = degree;
+    }
 
+    public String getCompanyWebsite(){
+        return companyWebsite;
+    }
+
+    public void setCompanyWebsite(String companyWebsite){
+        this.companyWebsite = companyWebsite;
+    }
+
+    public String getCompany(){
+        return company;
+    }
+
+    public void setCompany(String company){
+        this.company = company;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
 }
