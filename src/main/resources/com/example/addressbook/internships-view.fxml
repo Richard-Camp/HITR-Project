@@ -3,6 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 <BorderPane fx:controller="com.example.addressbook.controller.InternshipController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css">
     <!-- Top Navigation Bar -->
     <top>
@@ -28,50 +30,60 @@
             </HBox>
         </VBox>
     </top>
-
+    <left>
+        <AnchorPane prefHeight="602.0" prefWidth="224.0" style="-fx-background-color: #663399;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="15.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter Internships">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="38.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Internship Category">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <VBox layoutX="38.0" layoutY="159.0" spacing="15">
+                    <RadioButton fx:id="EngineeringRadioBox" layoutX="38.0" layoutY="159.0" mnemonicParsing="false" text="Engineering" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </RadioButton>
+                    <RadioButton fx:id="STEMRadioBox" layoutX="38.0" layoutY="192.0" mnemonicParsing="false" text="STEM" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </RadioButton>
+                    <RadioButton fx:id="BusinessRadioBox" layoutX="38.0" layoutY="227.0" mnemonicParsing="false" text="Business" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </RadioButton>
+                    <RadioButton fx:id="OtherRadioBox" layoutX="38.0" layoutY="227.0" mnemonicParsing="false" text="Other" textFill="WHITE">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </RadioButton>
+                </VBox>
+                <HBox spacing="5" layoutX="10" layoutY="10">
+                    <TextField fx:id="searchBar" promptText="Search..." />
+                    <Button fx:id="searchButton" onAction="#onSearchClick" text="Search" />
+                </HBox>
+            </children>
+        </AnchorPane>
+    </left>
     <!-- Center Content -->
     <center>
-        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20;">
-            <!-- Title for Internships -->
-            <Label text="Exclusive University Internships" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #5c2768;" />
-
-            <!-- Grid for Company Names, Text Areas, and Apply Buttons -->
-            <GridPane hgap="20" vgap="20" alignment="CENTER">
-                <children>
-                    <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
-                        <TextArea fx:id="companyInfo1" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
-                        <Button text="Apply" styleClass="apply-button"/>
-                    </VBox>
-                    <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
-                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
-                        <TextArea fx:id="companyInfo2" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
-                        <Button text="Apply" styleClass="apply-button"/>
-                    </VBox>
-                    <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
-                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
-                        <TextArea fx:id="companyInfo3" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
-                        <Button text="Apply" styleClass="apply-button"/>
-                    </VBox>
-
-                    <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1">
-                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
-                        <TextArea fx:id="companyInfo4" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
-                        <Button text="Apply" styleClass="apply-button"/>
-                    </VBox>
-                    <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
-                        <TextArea fx:id="companyInfo5" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
-                        <Button text="Apply" styleClass="apply-button"/>
-                    </VBox>
-                    <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                        <Label text="Company Name" style="-fx-font-size: 18px; -fx-text-fill: #5c2768;" />
-                        <TextArea fx:id="companyInfo6" promptText="Enter info here..." prefHeight="50" prefWidth="150" wrapText="true"/>
-                        <Button text="Apply" styleClass="apply-button"/>
-                    </VBox>
-                </children>
-            </GridPane>
-        </VBox>
+        <ScrollPane fitToHeight="true">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;-fx-padding:30;" BorderPane.alignment="CENTER">
+                <Text fill="#663399" layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Internships">
+                    <font>
+                        <Font name="System Bold" size="48.0" />
+                    </font>
+                </Text>
+                <FlowPane fx:id="paneFlowPane" hgap="70" layoutX="66" layoutY="106" prefWidth="990" vgap="100" />
+            </AnchorPane>
+        </ScrollPane>
     </center>
 
     <!-- Footer -->
