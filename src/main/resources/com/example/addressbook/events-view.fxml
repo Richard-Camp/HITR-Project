@@ -17,6 +17,8 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
 <BorderPane fx:controller="com.example.addressbook.controller.EventsController" stylesheets="@style2.css" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
     <top>
         <VBox>
@@ -58,86 +60,52 @@
                     <Font size="16.0" />
                 </font>
             </Text>
-            <Text fill="WHITE" layoutX="24.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
-                <font>
-                    <Font size="16.0" />
-                </font>
-            </Text>
-            <CheckBox layoutX="25.0" layoutY="186.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Health Care" textFill="WHITE">
+            <CheckBox fx:id="healthCheck" layoutX="25.0" layoutY="186.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Health Care" textFill="WHITE">
                 <font>
                     <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="219.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Education" textFill="WHITE">
+            <CheckBox fx:id="educationCheck" layoutX="25.0" layoutY="219.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Education" textFill="WHITE">
                 <font>
                     <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="285.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="161.0" text="Sales &amp;  Marketing" textFill="WHITE">
+            <CheckBox fx:id="stemCheck" layoutX="25.0" layoutY="285.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="161.0" text="STEM" textFill="WHITE">
                 <font>
                     <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="252.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="167.0" text="Finance &amp; Business" textFill="WHITE">
+            <CheckBox fx:id="businessCheck" layoutX="25.0" layoutY="252.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="167.0" text="Finance &amp; Business" textFill="WHITE">
                 <font>
                     <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="318.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Engineering" textFill="WHITE">
+            <CheckBox fx:id="engineeringCheck" layoutX="25.0" layoutY="318.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Engineering" textFill="WHITE">
                 <font>
                     <Font size="15.0" />
                 </font>
             </CheckBox>
-            <CheckBox layoutX="25.0" layoutY="352.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="168.0" text="Legal Professionals" textFill="WHITE">
+            <CheckBox fx:id="legalCheck" layoutX="25.0" layoutY="352.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="168.0" text="Legal Professionals" textFill="WHITE">
                 <font>
                     <Font size="15.0" />
                 </font>
             </CheckBox>
-            <TextField layoutX="23.0" layoutY="428.0" prefHeight="31.0" prefWidth="197.0" promptText="Enter Postcode">
-                <font>
-                    <Font size="15.0" />
-                </font>
-            </TextField>
-            <TextField layoutX="24.0" layoutY="33.0" prefHeight="31.0" prefWidth="193.0" promptText="Search Events">
-                <font>
-                    <Font size="15.0" />
-                </font>
-            </TextField>
+            <HBox spacing="5" layoutX="10" layoutY="10">
+                <TextField fx:id="searchBar" promptText="Search..." />
+                <Button fx:id="searchButton" onAction="#onSearchClick" text="Search" />
+            </HBox>
         </AnchorPane>
     </left>
     <center>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
-            <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUT Networking Events">
-                <font>
-                    <Font name="System Bold" size="48.0" />
-                </font>
-            </Text>
-         <Pane layoutX="31.0" layoutY="108.0" prefHeight="117.0" prefWidth="542.0" style="-fx-background-color: #d4d4d4;">
-            <children>
-               <Accordion prefHeight="77.0" prefWidth="542.0">
-                 <panes>
-                   <TitledPane animated="false" text="Event">
-                     <content>
-                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                              <children>
-                                 <Text layoutX="8.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                              </children>
-                           </AnchorPane>
-                     </content>
-                   </TitledPane>
-                     <TitledPane animated="false" layoutX="10.0" layoutY="88.0" text="Event">
-                        <content>
-                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                              <children>
-                                 <Text layoutX="7.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                              </children>
-                           </AnchorPane>
-                        </content>
-                     </TitledPane>
-                 </panes>
-               </Accordion>
-            </children>
-         </Pane>
-        </AnchorPane>
+        <ScrollPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: e0fffc;" BorderPane.alignment="CENTER">
+                <Text fill="#663399" layoutX="36.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUT Networking Events">
+                    <font>
+                        <Font name="System Bold" size="48.0" />
+                    </font>
+                </Text>
+                <FlowPane fx:id="paneFlowPane" hgap="70" layoutX="66" layoutY="106" prefWidth="990" vgap="100" />
+            </AnchorPane>
+        </ScrollPane>
     </center>
 </BorderPane>
