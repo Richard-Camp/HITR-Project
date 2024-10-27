@@ -318,7 +318,7 @@ public class JobController {
             query.append(minsalary);
         }
 
-        List<Job> checkJobs = jobManager.getJobs(query.toString());
+        List<Job> checkJobs = jobMan    ager.getJobs(query.toString());
         displayJobs(checkJobs);
 
     }
